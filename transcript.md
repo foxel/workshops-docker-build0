@@ -85,3 +85,26 @@ docker history step2
 **Задание**: изменить `step2/Dockerfile` так, чтобы размер образа уменьшился.
 
 
+## Step 3: ADD vs COPY
+
+COPY копирует фал из контекста в образ. Примеры:
+```
+COPY dir/ otherDir/
+COPY file otherDir/otherFile
+COPY file1 file2 otherDir/
+COPY file* otherDir/
+```
+
+ADD имеет расширенный функционал. 
+Он будет распаковывать узнаваемые архивы (gzip, bzip2, xz а также tar):
+```
+ADD package.tar.gz someDir/
+```
+
+Также ADD может скачивать файлы из сети. В этом случае распаковка **не происходит**. Например:
+```
+ADD http://example.com/file otherDir/otherFile
+ADD http://example.com/file otherDir/
+```
+
+## Step 4
