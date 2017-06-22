@@ -9,6 +9,4 @@ RUN unzip /tmp/consul.zip -d /usr/local/bin/
 
 RUN rm /tmp/consul.zip
 
-ENTRYPOINT ["/usr/local/bin/consul"]
-
-CMD ["agent", "--data-dir", "/tmp/consul", "--server", "--bootstrap"]
+CMD ["/usr/local/bin/consul", "agent", "--data-dir", "/tmp/consul", "--server", "--bootstrap"]

@@ -1,5 +1,5 @@
 #!/bin/sh
 
-NAME="$MY_NAME"
+NAME="$1"
 
 echo "Hello, ${NAME}"
