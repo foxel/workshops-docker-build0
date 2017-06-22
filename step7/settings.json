@@ -1,0 +1,11 @@
+{
+  "download-dir": "/data/downloads",
+  "incomplete-dir": "/data/incomplete",
+  "incomplete-dir-enabled": true,
+  "peer-port" : 55555,
+  "peer-port-random-on-start": false,
+  "rpc-enabled": true,
+  "rpc-authentication-required": false,
+  "rpc-whitelist": "127.0.0.1,192.168.*.*,172.17.*.*",
+  "rpc-whitelist-enabled": true
+}
